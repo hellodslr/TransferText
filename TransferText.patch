@@ -1,0 +1,15 @@
+Index: app/src/main/java/com/example/transfertext/Main2Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/transfertext/Main2Activity.java	(revision fb23dd102f87fb3724b4dab853b27fa809de314c)
++++ app/src/main/java/com/example/transfertext/Main2Activity.java	(date 1602849938074)
+@@ -27,6 +27,7 @@
+             public void onClick(View v) {
+                 Intent intent = new Intent(Main2Activity.this, MainActivity.class);
+                 startActivity(intent);
++                finish();
+             }
+         });
+     }
