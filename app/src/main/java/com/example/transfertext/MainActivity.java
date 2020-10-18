@@ -11,15 +11,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText inputText;
+    private TextView outputText;
+    private Button Add;
+    private Button Save;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText inputText = findViewById(R.id.editText);
-        final TextView outputText = findViewById(R.id.textView);
-        Button Add = findViewById(R.id.bt_add);
-        Button Save = findViewById(R.id.bt_save);
+        inputText = findViewById(R.id.editText);
+        outputText = findViewById(R.id.textView);
+        Add = findViewById(R.id.bt_add);
+        Save = findViewById(R.id.bt_save);
 
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +44,5 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }

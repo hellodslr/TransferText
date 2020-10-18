@@ -10,18 +10,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Main2Activity extends AppCompatActivity {
 
+    private String data;
+    private Button Back;
+    private TextView Display;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        Button Back = findViewById(R.id.bt_back);
-        TextView Display = findViewById(R.id.textView);
+        Back = findViewById(R.id.bt_back);
+        Display = findViewById(R.id.textView);
 //        Bundle bn = getIntent().getExtras();
 //        assert bn != null;
-//        String name = bn.getString("abc");
+//        String name = bn.getString("data");
+//        Display.setText(String.valueOf(name));
+
         Intent intent = getIntent();
-        String data = intent.getStringExtra("data");
+        data = intent.getStringExtra("data");
         Display.setText(data);
 
         Back.setOnClickListener(new View.OnClickListener() {
