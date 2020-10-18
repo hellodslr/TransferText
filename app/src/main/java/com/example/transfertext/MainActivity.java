@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String Data = outputText.getText().toString();
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                intent.putExtra("abc", Data);
+                intent.putExtra("data", Data);
                 startActivity(intent);
                 finish();
             }

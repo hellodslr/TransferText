@@ -17,10 +17,12 @@ public class Main2Activity extends AppCompatActivity {
 
         Button Back = findViewById(R.id.bt_back);
         TextView Display = findViewById(R.id.textView);
-        Bundle bn = getIntent().getExtras();
-        assert bn != null;
-        String name = bn.getString("abc");
-        Display.setText(String.valueOf(name));
+//        Bundle bn = getIntent().getExtras();
+//        assert bn != null;
+//        String name = bn.getString("abc");
+        Intent intent = getIntent();
+        String data = intent.getStringExtra("data");
+        Display.setText(data);
 
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
