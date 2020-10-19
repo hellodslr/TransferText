@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText inputText;
     private TextView outputText;
-    private Button Add;
-    private Button Save;
+    private Button add;
+    private Button save;
 
 
     @Override
@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         inputText = findViewById(R.id.editText);
         outputText = findViewById(R.id.textView);
-        Add = findViewById(R.id.bt_add);
-        Save = findViewById(R.id.bt_save);
+        add = findViewById(R.id.bt_add);
+        save = findViewById(R.id.bt_save);
 
-        Add.setOnClickListener(new View.OnClickListener() {
+        add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String Value = inputText.getText().toString();
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Save.setOnClickListener(new View.OnClickListener() {
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (TextUtils.isEmpty(outputText.getText().toString())) {
